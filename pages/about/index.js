@@ -36,8 +36,8 @@ const aboutData = [
           <SiFramer key="framer" />,
           <SiRedux key="redux" />,
           <MongoIcon key="mongo"/>,
-          <NodeJsIcon/>,
-          <MySQLIcon/>
+          <NodeJsIcon key="nodejs"/>,
+          <MySQLIcon key="mysql"/>
         ],
       },
       {
