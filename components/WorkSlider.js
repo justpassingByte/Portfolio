@@ -28,8 +28,8 @@ const workSlides = {
         },
         {
           title: 'title4',
-          path: '/thumb4.jpg',
-          link: ''
+          path: '/project4.png',
+          link: 'https://multi-store-five.vercel.app/'
         },
       ],
     },
@@ -37,7 +37,7 @@ const workSlides = {
       images: [
         {
           title: 'title5',
-          path: '/thumb4.jpg',
+          path: '/project4.png',
         },
         {
           title: 'title6',
