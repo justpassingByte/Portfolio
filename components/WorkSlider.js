@@ -23,8 +23,8 @@ const workSlides = {
         },
         {
           title: 'title3',
-          path: '/project3.png',
-          link: 'https://github.com/justpassingByte/Portfolio'
+          path: '/project.png',
+          link: 'https://github.com/justpassingByte/food-store-client'
         },
         {
           title: 'title4',
@@ -49,7 +49,7 @@ const workSlides = {
         },
         {
           title: 'title8',
-          path: '/project3.png',
+          path: '/project.png',
         },
       ],
     },
