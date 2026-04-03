@@ -9,6 +9,7 @@ import {
   RxCode,
   RxMobile,
   RxLayers,
+  RxGlobe,
 } from 'react-icons/rx';
 
 const aboutData = [
@@ -16,24 +17,24 @@ const aboutData = [
     title: 'capabilities',
     info: [
       {
-        title: 'Web Applications',
+        title: 'Full-Stack Web Apps',
         icons: [<RxDesktop key="web" />],
-      },
-      {
-        title: 'Backend Systems',
-        icons: [<RxCode key="backend" />],
+        desc: 'Frontend to backend, database to deployment',
       },
       {
         title: 'Real-time Systems',
         icons: [<RxLayers key="realtime" />],
+        desc: 'Live data, instant updates, multiplayer',
       },
       {
-        title: 'Mobile & Desktop',
-        icons: [<RxMobile key="mobile" />],
-      },
-      {
-        title: 'Deployment & Infrastructure (Docker, VPS)',
+        title: 'Cloud & Infrastructure',
         icons: [<RxRocket key="infra" />],
+        desc: 'Containerized, auto-scaled, production-grade',
+      },
+      {
+        title: 'AI & Automation',
+        icons: [<RxGlobe key="ai" />],
+        desc: 'Intelligent agents and decision pipelines',
       },
     ],
   },
@@ -42,15 +43,15 @@ const aboutData = [
     info: [
       {
         title: 'Simple > Complex',
-        stage: '— cut noise, ship clarity',
+        desc: 'Cut noise, ship clarity',
       },
       {
         title: 'Real users > Perfect code',
-        stage: '— solve problems first',
+        desc: 'Solve problems first',
       },
       {
         title: 'Systems > Features',
-        stage: '— build things that connect',
+        desc: 'Build things that connect',
       },
     ],
   },
@@ -59,19 +60,19 @@ const aboutData = [
     info: [
       {
         title: 'RobinHUD',
-        stage: 'Real-time decision support system',
+        desc: 'Real-time decision support',
       },
       {
         title: 'Testictour',
-        stage: 'Community tournament platform',
+        desc: 'Tournament platform — AWS EC2',
       },
       {
         title: 'TFT Portfolio',
-        stage: 'Player identity & profile system',
+        desc: 'Player identity & profile system',
       },
       {
         title: 'Netsla',
-        stage: 'Gaming café tournament ecosystem',
+        desc: 'Gaming café ecosystem',
       },
     ],
   },
@@ -95,52 +96,54 @@ const About = () => {
       </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         <div className="flex-1 flex flex-col justify-center">
+          {/* Label */}
+          <span className="label mb-3">Who I am</span>
           {/* Text */}
           <h2 className="h2">
             I build complete products,{' '}
-            <span className="text-accent">independently.</span>
+            <span className="text-gradient">independently.</span>
           </h2>
-          <p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
-            I don&apos;t just write code — I build systems. Each product I create is designed to solve a
-            real problem for real users. I think in ecosystems, where every tool connects and supports
-            the others. I use AI to move faster without sacrificing quality, and I handle everything
-            from frontend to backend, infrastructure, and deployment.
+          <p className="max-w-[480px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-[14px]">
+            Solo builder who handles everything from frontend to backend,
+            infrastructure, and deployment — using AI to move faster.
           </p>
         </div>
         <div className="flex flex-col w-full xl:max-w-[48%] h-[380px]">
+          {/* Tabs */}
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => (
               <div
                 onClick={() => setIndex(itemIndex)}
                 key={itemIndex}
                 className={`${
-                  index === itemIndex &&
-                  'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'
-                } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                  index === itemIndex
+                    ? 'text-accent after:w-[100%] after:bg-accent'
+                    : 'text-white/50 hover:text-white/80'
+                } cursor-pointer capitalize text-sm xl:text-base font-medium relative after:w-8 after:h-[2px] after:bg-white/20 after:absolute after:-bottom-1 after:left-0 after:transition-all after:duration-300 transition-colors duration-300`}
               >
                 {item.title}
               </div>
             ))}
           </div>
-          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+          {/* Content */}
+          <div className="py-2 xl:py-6 flex flex-col gap-y-3 xl:gap-y-4 items-center xl:items-start">
             {aboutData[index].info.map((item, itemIndex) => (
               <div
                 key={itemIndex}
-                className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                className="glass glass-hover px-5 py-3 w-full max-w-[400px] flex items-center gap-x-4"
               >
-                {/* Title */}
-                <div className="font-light mb-2 md:mb-0">
-                  {item.title}
-                </div>
-                <div className="hidden md:flex"> - </div>
-                <div>{item.stage}</div>
-                {/* Icons */}
-                <div className="flex gap-x-4">
-                  {item.icons?.map((icon, iconIndex) => (
-                    <div className="text-2xl text-white" key={iconIndex}>
-                      {icon}
-                    </div>
-                  ))}
+                {/* Icon */}
+                {item.icons && (
+                  <div className="flex gap-x-3 text-accent text-xl shrink-0">
+                    {item.icons.map((icon, iconIndex) => (
+                      <div key={iconIndex}>{icon}</div>
+                    ))}
+                  </div>
+                )}
+                {/* Text */}
+                <div className="flex flex-col">
+                  <div className="text-sm font-medium text-white/90">{item.title}</div>
+                  <div className="text-[12px] text-white/40 font-light">{item.desc}</div>
                 </div>
               </div>
             ))}

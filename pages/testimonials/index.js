@@ -13,7 +13,7 @@ const Testimonials = () => {
           exit='hidden'
           className='h2 mb-8 xl:mb-0'
         >
-          What people <span className='text-accent'>say.</span>
+          What people <span className='text-gradient'>say.</span>
         </motion.h2>
         
         {/* slider */}

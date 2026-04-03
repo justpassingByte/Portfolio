@@ -67,13 +67,13 @@ const TestimonialSlider = () => {
               </div>
 
               {/* Quote & message */}
-              <div className='bg-primary/20 flex-1 flex flex-col justify-center before:w-[1px] xl:before:bg-white/10 xl:before:absolute xl:before:left-0 xl:before:h-[200px] relative xl:pl-20 mt-4 xl:mt-0 p-6 rounded-lg'>
+              <div className='glass flex-1 flex flex-col justify-center relative xl:pl-20 mt-4 xl:mt-0 p-8'>
                 {/* Quote icon */}
                 <div className='mb-4'>
-                  <FaQuoteLeft className='text-4xl xl:text-6xl text-white/20 mx-auto md:mx-0' />
+                  <FaQuoteLeft className='text-3xl xl:text-5xl text-accent/30 mx-auto md:mx-0' />
                 </div>
                 {/* message */}
-                <div className='xl:text-lg text-center md:text-left text-white/70'>
+                <div className='xl:text-lg text-center md:text-left text-white/70 font-light leading-relaxed'>
                   {person.message}
                 </div>
               </div>

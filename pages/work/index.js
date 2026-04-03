@@ -17,16 +17,14 @@ const Work = () => {
             animate='show'
             exit='hidden'
             className="h2 xl:mt-8">
-               My Systems <span className="text-accent">.</span></motion.h2>
+               My Systems <span className="text-gradient">.</span></motion.h2>
             <motion.p
              variants={fadeIn('up',0.4)}
              initial='hidden'
              animate='show'
              exit='hidden'
-            className="mb-4 max-w-[400px] mx-auto lg:mx-0">
-              I don&apos;t build isolated tools — I build connected systems. Each product
-              solves a real problem for a real community, and they&apos;re designed to work
-              together as an ecosystem.
+            className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-[14px]">
+              Connected products, not isolated tools.
             </motion.p>
         </div>
         {/* slider */}

@@ -1,4 +1,3 @@
-// icons
 import {
   RxDesktop,
   RxCode,
@@ -6,35 +5,39 @@ import {
   RxMobile,
   RxRocket,
   RxArrowTopRight,
+  RxMagicWand,
 } from "react-icons/rx";
 
-
-// data
 const serviceData = [
   {
-    icon: <RxDesktop />,
-    title: 'Web Applications',
-    description: 'Full-stack web products built for real users — fast, clean, and production-ready.',
+    icon: <RxCode />,
+    title: 'Data & Analytics',
+    description: 'Leaderboards, performance tracking, and interactive dashboards that transform complex datasets into clear insights.',
   },
   {
-    icon: <RxCode />,
-    title: 'Backend Systems',
-    description: 'APIs, services, and databases that power your product at scale.',
+    icon: <RxMagicWand />,
+    title: 'AI Integration',
+    description: 'Engineering intelligent agents, RAG pipelines, and automated workflows that turn raw data into actionable decisions.',
+  },
+  {
+    icon: <RxDesktop />,
+    title: 'Full-Stack & Cross-Platform',
+    description: 'Web, mobile, and desktop — end-to-end from database design and API architecture to polished, responsive interfaces.',
   },
   {
     icon: <RxLayers />,
-    title: 'Real-time Systems',
-    description: 'Live data, events, and interactions — built for speed and responsiveness.',
-  },
-  {
-    icon: <RxMobile />,
-    title: 'Mobile & Desktop',
-    description: 'Cross-platform apps that bring your product to any device.',
+    title: 'Real-Time Systems',
+    description: 'Building low-latency data pipelines for live dashboards, instant notifications, and multiplayer experiences.',
   },
   {
     icon: <RxRocket />,
-    title: 'Deployment & Infrastructure',
-    description: 'Docker, VPS, CI/CD — your product shipped and running reliably in production.',
+    title: 'Cloud & DevOps',
+    description: 'Deploying production systems with containerized infrastructure, automated pipelines, and zero-downtime scaling.',
+  },
+  {
+    icon: <RxMobile />,
+    title: 'Product & UX',
+    description: 'Designing complete user journeys — multi-language support, responsive layouts, and intuitive flows that feel native.',
   },
 ];
 
@@ -62,25 +65,27 @@ const ServiceSlider = () => {
         clickable:true,
       }}
       modules={[FreeMode,Pagination]}
-      className='h-[200px] sm:h-[300px]'
+      className='h-[240px] sm:h-[300px]'
     > 
     {serviceData.map((item,index)=>{
       return (
       <SwiperSlide key={index}>
-          <div className="bg-[rgba(65,47,123,0.15)] h-full rounded-lg px-6 py-8
-          flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65
-          ,169,0.15)] transition-all duration-300">
+          <div className="glass glass-hover h-full px-6 py-6
+          flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer
+          justify-between">
 
-          <div className="text-4xl text-accent mb-4"> 
+          <div className="text-3xl text-accent sm:mb-3"> 
             {item.icon}
           </div>  
-          <div className="mb-8">
-            <div className="mb-2 text-lg">{item.title}</div>
-            <p className="max-w-[350px] leading-normal">{item.description}</p>
+          
+          <div className="flex-1 sm:mb-3">
+            <div className="mb-1 text-[15px] font-semibold text-white/90">{item.title}</div>
+            <p className="text-[12px] leading-relaxed text-white/40 font-light">{item.description}</p>
           </div>
-          <div className="text-3xl">
+          
+          <div className="text-2xl flex items-center sm:items-start">
             <RxArrowTopRight className="group-hover:rotate-45
-            group-hover:text-accent translate-all duration-300"/>
+            group-hover:text-accent transition-all duration-300 text-white/30"/>
           </div>
           </div>
       </SwiperSlide>

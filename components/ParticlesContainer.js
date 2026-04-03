@@ -74,6 +74,8 @@ const ParticlesContainer = () => {
                 { src: 'https://cdn.simpleicons.org/nvidia/ffffff', width: 50, height: 50 },
                 { src: 'https://cdn.simpleicons.org/vercel/ffffff', width: 50, height: 50 },
                 { src: 'https://cdn.simpleicons.org/supabase/ffffff', width: 50, height: 50 },
+                { src: 'https://cdn.simpleicons.org/amazonaws/ffffff', width: 50, height: 50 },
+                { src: 'https://cdn.simpleicons.org/docker/ffffff', width: 50, height: 50 },
                 { src: '/cheems.png', width: 50, height: 50 },
                 { src: '/cheems2.png', width: 50, height: 50 },
               ],

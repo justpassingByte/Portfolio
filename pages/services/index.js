@@ -17,15 +17,14 @@ const Services = () => {
             animate='show'
             exit='hidden'
             className="h2 xl:mt-8">
-               What I can <span className="text-accent">build.</span></motion.h2>
+               What I <span className="text-gradient">build.</span></motion.h2>
             <motion.p
              variants={fadeIn('up',0.4)}
              initial='hidden'
              animate='show'
              exit='hidden'
-            className="mb-4 max-w-[400px] mx-auto lg:mx-0">
-              I work across the full stack — from user-facing interfaces to backend systems
-              and production infrastructure. Solo, but without shortcuts.
+            className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-[14px]">
+              Full stack, solo, production-ready.
             </motion.p>
         </div>
         {/* slider */}
