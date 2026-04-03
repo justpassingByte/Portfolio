@@ -8,8 +8,8 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
   return (
   <Layout>
-    <AnimatePresence mode='wait'>
-      <motion.div key={router.route} className='h-full'>
+    <AnimatePresence mode='wait' onExitComplete={() => window.scrollTo(0, 0)}>
+      <motion.div key={router.asPath} className='h-full'>
        <Transition/>
         <Component {...pageProps} />
       </motion.div>
