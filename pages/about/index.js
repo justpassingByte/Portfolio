@@ -4,92 +4,74 @@ import Circles from '../../components/Circles';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaFigma,
-} from 'react-icons/fa';
-import {
-  SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
-  SiRedux,
-} from 'react-icons/si';
-import { IoLogoTailwindcss } from "react-icons/io";
-import MySQLIcon from '../../components/MySQLIcon';
-import MongoIcon from '../../components/MongoIcon';
-import NodeJsIcon from '../../components/NodeJsIcon';
+  RxDesktop,
+  RxRocket,
+  RxCode,
+  RxMobile,
+  RxLayers,
+} from 'react-icons/rx';
+
 const aboutData = [
   {
-    title: 'skills',
+    title: 'capabilities',
     info: [
       {
-        title: 'Web Development',
-        icons: [
-          <FaHtml5 key="html5" />,
-          <FaCss3 key="css3" />,
-          <FaJs key="js" />,
-          <FaReact key="react" />,
-          <SiNextdotjs key="nextjs" />,
-          <SiFramer key="framer" />,
-          <SiRedux key="redux" />,
-          <MongoIcon key="mongo"/>,
-          <NodeJsIcon key="nodejs"/>,
-          <MySQLIcon key="mysql"/>
-        ],
+        title: 'Web Applications',
+        icons: [<RxDesktop key="web" />],
       },
       {
-        title: 'UI/UX Design',
-        icons: [<FaFigma key="figma" />, <SiAdobexd key="xd" />, <SiAdobephotoshop key="photoshop" />],
+        title: 'Backend Systems',
+        icons: [<RxCode key="backend" />],
+      },
+      {
+        title: 'Real-time Systems',
+        icons: [<RxLayers key="realtime" />],
+      },
+      {
+        title: 'Mobile & Desktop',
+        icons: [<RxMobile key="mobile" />],
+      },
+      {
+        title: 'Deployment & Infrastructure (Docker, VPS)',
+        icons: [<RxRocket key="infra" />],
       },
     ],
   },
   {
-    title: 'awards',
+    title: 'philosophy',
     info: [
       {
-        title: 'Webby Awards - Honoree',
-        stage: ' - ',
+        title: 'Simple > Complex',
+        stage: '— cut noise, ship clarity',
       },
       {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: ' - ',
+        title: 'Real users > Perfect code',
+        stage: '— solve problems first',
+      },
+      {
+        title: 'Systems > Features',
+        stage: '— build things that connect',
       },
     ],
   },
   {
-    title: 'experience',
+    title: 'projects',
     info: [
       {
-        title: 'UX/UI Designer - XYZ Company',
-        stage: ' - ',
+        title: 'RobinHUD',
+        stage: 'Real-time decision support system',
       },
       {
-        title: 'Web Developer - ABC Agency',
-        stage: ' - ',
+        title: 'Testictour',
+        stage: 'Community tournament platform',
       },
       {
-        title: 'Intern - DEF Corporation',
-        stage: ' - ',
-      },
-    ],
-  },
-  {
-    title: 'credentials',
-    info: [
-      {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '-',
+        title: 'TFT Portfolio',
+        stage: 'Player identity & profile system',
       },
       {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '-',
-      },
-      {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '-',
+        title: 'Netsla',
+        stage: 'Gaming café tournament ecosystem',
       },
     ],
   },
@@ -115,10 +97,14 @@ const About = () => {
         <div className="flex-1 flex flex-col justify-center">
           {/* Text */}
           <h2 className="h2">
-            Captivating <span className="text-accent">stories</span> and bright, magnificent designs.
+            I build complete products,{' '}
+            <span className="text-accent">independently.</span>
           </h2>
           <p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
-            With over a decade of experience in web development and UI/UX design, I have a passion for creating intuitive and visually stunning user experiences. My journey spans across various industries, where I have honed my skills and earned recognition for my contributions.
+            I don&apos;t just write code — I build systems. Each product I create is designed to solve a
+            real problem for real users. I think in ecosystems, where every tool connects and supports
+            the others. I use AI to move faster without sacrificing quality, and I handle everything
+            from frontend to backend, infrastructure, and deployment.
           </p>
         </div>
         <div className="flex flex-col w-full xl:max-w-[48%] h-[380px]">

@@ -1,9 +1,9 @@
 // icons
 import {
-  RxCrop,
-  RxPencil2,
   RxDesktop,
-  RxReader,
+  RxCode,
+  RxLayers,
+  RxMobile,
   RxRocket,
   RxArrowTopRight,
 } from "react-icons/rx";
@@ -12,29 +12,29 @@ import {
 // data
 const serviceData = [
   {
-    icon: <RxCrop />,
-    title: 'Responsive Design',
-    description: 'Create visually appealing and optimized designs for all devices, from mobile to desktop.',
-  },
-  {
-    icon: <RxPencil2 />,
-    title: 'UI/UX Design',
-    description: 'Design intuitive user interfaces and enhance the user experience for seamless interaction.',
-  },
-  {
     icon: <RxDesktop />,
-    title: 'Front-end Dev',
-    description: 'Build modern web interfaces using HTML, CSS, and JavaScript.',
+    title: 'Web Applications',
+    description: 'Full-stack web products built for real users — fast, clean, and production-ready.',
   },
   {
-    icon: <RxReader />,
-    title: 'Back-end Dev',
-    description: 'Handle data and manage servers using Node.js and databases like MongoDB.',
+    icon: <RxCode />,
+    title: 'Backend Systems',
+    description: 'APIs, services, and databases that power your product at scale.',
+  },
+  {
+    icon: <RxLayers />,
+    title: 'Real-time Systems',
+    description: 'Live data, events, and interactions — built for speed and responsiveness.',
+  },
+  {
+    icon: <RxMobile />,
+    title: 'Mobile & Desktop',
+    description: 'Cross-platform apps that bring your product to any device.',
   },
   {
     icon: <RxRocket />,
-    title: 'SEO Optimization',
-    description: 'Optimize your website to improve search engine rankings and drive more traffic.',
+    title: 'Deployment & Infrastructure',
+    description: 'Docker, VPS, CI/CD — your product shipped and running reliably in production.',
   },
 ];
 

@@ -15,9 +15,9 @@ const Home = () => {
             initial='hidden'
             animate='show'
             exit='hidden' className='h1'>
-          Transforming Ideas <br/> Into{' '}
+          I build systems,<br/>not just{' '}
           <span className='text-accent'>
-          Digital Reality
+          features.
           </span>
         </motion.h1>
         {/* subtitle */}
@@ -27,7 +27,8 @@ const Home = () => {
             animate='show'
             exit='hidden'
              className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'>
-          Lorem
+          Solo builder creating complete products — from web & backend to real-time systems and infrastructure.
+          Web · Backend · Real-time · Mobile · Infrastructure
         </motion.p>
         {/* ProjectBtn */}
          <div className='flex justify-center xl:hidden relative'>

@@ -18,78 +18,68 @@ const ParticlesContainer = () => {
         options={{
           fullScreen: { enable: false },
           background: {
-            color: {
-              value: '',
-            },
+            color: { value: '' },
           },
           fpsLimit: 120,
           interactivity: {
             events: {
-              onClick: {
-                enable: false,
-                mode: 'push',
-              },
-              onHover: {
-                enable: true,
-                mode: 'repulse',
-              },
+              onClick: { enable: false, mode: 'push' },
+              onHover: { enable: true, mode: 'repulse' },
               resize: true,
             },
             modes: {
-              push: {
-                quantity: 90,
-              },
-              repulse: {
-                distance: 200,
-                duration: 0.4,
-              },
+              push: { quantity: 90 },
+              repulse: { distance: 200, duration: 0.4 },
             },
           },
           particles: {
-            color: {
-              value: '#ffffff',
-            },
+            color: { value: '#ffffff' },
             links: {
               color: '#ffffff',
               distance: 150,
               enable: true,
-              opacity: 0.5,
+              opacity: 0.1,
               width: 1,
             },
-            collisions: {
-              enable: true,
-            },
+            collisions: { enable: true },
             move: {
               directions: 'none',
               enable: true,
-              outModes: {
-                default: 'bounce',
-              },
+              outModes: { default: 'bounce' },
               random: false,
-              speed: 1,
+              speed: 0.8,
               straight: false,
             },
             number: {
-              density: {
-                enable: true,
-                area: 800,
-              },
-              value: 50,
+              density: { enable: true, area: 800 },
+              value: 40,
             },
             opacity: {
-              value: 0.5,
+              value: 0.3,
             },
             shape: {
               type: 'image',
               image: [
-                { src: '/icons8-nextjs-64.png', width: 50, height: 50 },
-                { src: '/icons8-react-50.png', width: 50, height: 50 },
-                { src: '/icons8-tailwind-css-64.png', width: 50, height: 50 },
-              
+                { src: 'https://cdn.simpleicons.org/openai/ffffff', width: 50, height: 50 },
+                { src: 'https://cdn.simpleicons.org/anthropic/ffffff', width: 50, height: 50 },
+                { src: 'https://cdn.simpleicons.org/googlegemini/ffffff', width: 50, height: 50 },
+                { src: 'https://cdn.simpleicons.org/githubcopilot/ffffff', width: 50, height: 50 },
+                { src: 'https://cdn.simpleicons.org/cursor/ffffff', width: 50, height: 50 },
+                { src: 'https://cdn.simpleicons.org/perplexity/ffffff', width: 50, height: 50 },
+                { src: 'https://cdn.simpleicons.org/mistral/ffffff', width: 50, height: 50 },
+                { src: 'https://cdn.simpleicons.org/meta/ffffff', width: 50, height: 50 },
+                { src: 'https://cdn.simpleicons.org/huggingface/ffffff', width: 50, height: 50 },
+                { src: 'https://cdn.simpleicons.org/langchain/ffffff', width: 50, height: 50 },
+                { src: 'https://cdn.simpleicons.org/ollama/ffffff', width: 50, height: 50 },
+                { src: 'https://cdn.simpleicons.org/nvidia/ffffff', width: 50, height: 50 },
+                { src: 'https://cdn.simpleicons.org/vercel/ffffff', width: 50, height: 50 },
+                { src: 'https://cdn.simpleicons.org/supabase/ffffff', width: 50, height: 50 },
+                { src: '/cheems.png', width: 50, height: 50 },
+                { src: '/cheems2.png', width: 50, height: 50 },
               ],
             },
             size: {
-              value: { min: 20, max: 40 },
+              value: { min: 15, max: 25 },
             },
           },
           detectRetina: true,

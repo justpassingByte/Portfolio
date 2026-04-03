@@ -17,13 +17,16 @@ const Services = () => {
             animate='show'
             exit='hidden'
             className="h2 xl:mt-8">
-               My Services <span className="text-accent">.</span></motion.h2>
+               What I can <span className="text-accent">build.</span></motion.h2>
             <motion.p
              variants={fadeIn('up',0.4)}
              initial='hidden'
              animate='show'
              exit='hidden'
-            className="mb-4 max-w-[400px] mx-auto lg:mx-0">I provide a wide range of web development services, from creating responsive and visually appealing designs to building robust back-end systems. Whether you need a modern front-end interface, a seamless user experience, or optimization for search engines, I offer tailored solutions to meet your project goals.</motion.p>
+            className="mb-4 max-w-[400px] mx-auto lg:mx-0">
+              I work across the full stack — from user-facing interfaces to backend systems
+              and production infrastructure. Solo, but without shortcuts.
+            </motion.p>
         </div>
         {/* slider */}
           <motion.div
