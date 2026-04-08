@@ -20,7 +20,7 @@ const projects = [
   },
   {
     title: 'TFT Grimoire',
-    paths: ['/tftgrimoire.png', '/tftgrimoire-2.PNG'],
+    paths: ['/tftgrimoire.PNG', '/tftgrimoire-2.png'],
     link: 'http://16.176.11.53:3000',
     description: 'Player identity & profile system',
   },
