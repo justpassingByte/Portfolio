@@ -14,7 +14,7 @@ const projects = [
 
   {
     title: 'Testictour',
-    paths: ['/testictour.PNG'],
+    paths: ['/testictour.jpeg', '/testictour2.jpeg', '/testictour3.jpeg'],
     link: 'http://16.176.11.53',
     description: 'Community tournament platform',
   },
@@ -41,6 +41,12 @@ const projects = [
     paths: ['/netsla.PNG'],
     link: 'https://netsla.vercel.app',
     description: 'Gaming café tournament ecosystem',
+  },
+  {
+    title: 'DealSniper',
+    paths: ['/smartdeal.jpeg'],
+    link: 'https://smartdeal-tawny.vercel.app',
+    description: 'DealSniper is a browser extension that helps you find the best deals on products you love.',
   },
 ];
 
