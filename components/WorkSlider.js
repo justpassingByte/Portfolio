@@ -14,7 +14,7 @@ const projects = [
 
   {
     title: 'Testictour',
-    paths: ['/testictour.jpeg', '/testictour2.jpeg', '/testictour3.jpeg'],
+    paths: ['/testictour.jpeg', '/testictour2.jpeg', '/testictour3.jpeg', '/testictour4.jpeg'],
     link: 'http://16.176.11.53',
     description: 'Community tournament platform',
   },
