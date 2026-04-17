@@ -15,13 +15,13 @@ const projects = [
   {
     title: 'Testictour',
     paths: ['/testictour.jpeg', '/testictour2.jpeg', '/testictour3.jpeg', '/testictour4.jpeg'],
-    link: 'http://16.176.11.53',
+    link: 'https://testictour.com',
     description: 'Community tournament platform',
   },
   {
     title: 'TFT Grimoire',
     paths: ['/tftgrimoire.PNG', '/tftgrimoire-2.png'],
-    link: 'http://16.176.11.53:3000',
+    link: 'https://grimoire.testictour.com',
     description: 'Player identity & profile system',
   },
   {
