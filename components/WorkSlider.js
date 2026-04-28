@@ -20,7 +20,7 @@ const projects = [
   },
   {
     title: 'TFT Grimoire',
-    paths: ['/tftgrimoire.PNG', '/tftgrimoire-2.png'],
+    paths: ['/tierlist.jpeg', '/tierlistmaker.jpeg', '/compbuilder.jpeg', '/admincomptierlist.jpeg', '/admincomptierlistbuilder.jpeg'],
     link: 'https://grimoire.testictour.com',
     description: 'Player identity & profile system',
   },
