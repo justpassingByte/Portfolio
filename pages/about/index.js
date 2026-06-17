@@ -3,76 +3,65 @@ import React, { useState } from 'react';
 import Circles from '../../components/Circles';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
-import {
-  RxDesktop,
-  RxRocket,
-  RxCode,
-  RxMobile,
-  RxLayers,
-  RxGlobe,
-} from 'react-icons/rx';
+import { RxCode, RxGlobe, RxLayers, RxRocket } from 'react-icons/rx';
 
 const aboutData = [
   {
     title: 'capabilities',
     info: [
       {
-        title: 'Full-Stack Web Apps',
-        icons: [<RxDesktop key="web" />],
-        desc: 'Frontend to backend, database to deployment',
+        title: 'Full-Stack MVPs',
+        icons: [<RxCode key="code" />],
+        desc: 'React, Next.js, Node.js, APIs, database, deployment',
       },
       {
-        title: 'Real-time Systems',
-        icons: [<RxLayers key="realtime" />],
-        desc: 'Live data, instant updates, multiplayer',
-      },
-      {
-        title: 'Cloud & Infrastructure',
-        icons: [<RxRocket key="infra" />],
-        desc: 'Containerized, auto-scaled, production-grade',
-      },
-      {
-        title: 'AI & Automation',
+        title: 'AI Workflows',
         icons: [<RxGlobe key="ai" />],
-        desc: 'Intelligent agents and decision pipelines',
+        desc: 'Structured input, retrieval, context, reliable output',
+      },
+      {
+        title: 'Product Thinking',
+        icons: [<RxLayers key="product" />],
+        desc: 'From ambiguous idea to usable product flow',
+      },
+      {
+        title: 'Fast Iteration',
+        icons: [<RxRocket key="ship" />],
+        desc: 'Ship, test, learn, and improve with AI-assisted workflow',
       },
     ],
   },
   {
-    title: 'philosophy',
+    title: 'mindset',
     info: [
       {
-        title: 'Simple > Complex',
-        desc: 'Cut noise, ship clarity',
+        title: 'Workflow > Prompt',
+        desc: 'AI is useful when input, context, and output are designed well',
       },
       {
-        title: 'Real users > Perfect code',
-        desc: 'Solve problems first',
+        title: 'Structure > Vague Text',
+        desc: 'I turn messy user data into fields the product can use',
       },
       {
-        title: 'Systems > Features',
-        desc: 'Build things that connect',
+        title: '0 to 1 Execution',
+        desc: 'Most of my experience comes from building and shipping my own products',
       },
     ],
   },
   {
-    title: 'projects',
+    title: 'growth',
     info: [
       {
-        title: 'RobinHUD',
-        desc: 'Real-time decision support',
+        title: 'Team Environment',
+        desc: 'Looking to improve collaboration, code review, and production habits',
       },
       {
-        title: 'Testictour',
-        desc: 'Tournament platform — AWS EC2',
+        title: 'Startup/Product Fit',
+        desc: 'Comfortable with ambiguity, product tradeoffs, and fast MVP work',
       },
       {
-        title: 'TFT Portfolio',
-        desc: 'Player identity & profile system',
-      },
-      {
-        title: 'Netsla',
-        desc: 'Gaming café ecosystem',
+        title: 'AI Product Direction',
+        desc: 'Interested in systems where AI becomes part of a real workflow',
       },
     ],
   },
@@ -84,33 +73,27 @@ const About = () => {
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
-      {/* Avatar */}
       <motion.div
         variants={fadeIn('right', 0.2)}
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="hidden xl:flex absolute bottom-0 -left-[250px]"
+        className="absolute bottom-0 -left-[250px] hidden xl:flex"
       >
         <Avatar />
       </motion.div>
-      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        <div className="flex-1 flex flex-col justify-center">
-          {/* Label */}
+      <div className="container mx-auto flex h-full flex-col items-center gap-x-6 xl:flex-row">
+        <div className="flex flex-1 flex-col justify-center">
           <span className="label mb-3">Who I am</span>
-          {/* Text */}
           <h2 className="h2">
-            I build complete products,{' '}
-            <span className="text-gradient">independently.</span>
+            I build usable AI products, <span className="text-gradient">independently.</span>
           </h2>
-          <p className="max-w-[480px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-[14px]">
-            Solo builder who handles everything from frontend to backend,
-            infrastructure, and deployment — using AI to move faster.
+          <p className="mx-auto mb-6 max-w-[520px] px-2 text-[14px] xl:mx-0 xl:mb-12 xl:px-0">
+            Around 3 years of hands-on personal product building, mainly from 0 to 1. I am strongest at turning ideas into working MVPs and I am looking for a professional team where I can contribute while improving engineering process and teamwork.
           </p>
         </div>
-        <div className="flex flex-col w-full xl:max-w-[48%] h-[380px]">
-          {/* Tabs */}
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+        <div className="flex h-[380px] w-full flex-col xl:max-w-[48%]">
+          <div className="mx-auto mb-4 flex gap-x-4 xl:mx-0 xl:gap-x-8">
             {aboutData.map((item, itemIndex) => (
               <div
                 onClick={() => setIndex(itemIndex)}
@@ -119,31 +102,19 @@ const About = () => {
                   index === itemIndex
                     ? 'text-accent after:w-[100%] after:bg-accent'
                     : 'text-white/50 hover:text-white/80'
-                } cursor-pointer capitalize text-sm xl:text-base font-medium relative after:w-8 after:h-[2px] after:bg-white/20 after:absolute after:-bottom-1 after:left-0 after:transition-all after:duration-300 transition-colors duration-300`}
+                } relative cursor-pointer text-sm font-medium capitalize transition-colors duration-300 after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-8 after:bg-white/20 after:transition-all after:duration-300 xl:text-base`}
               >
                 {item.title}
               </div>
             ))}
           </div>
-          {/* Content */}
-          <div className="py-2 xl:py-6 flex flex-col gap-y-3 xl:gap-y-4 items-center xl:items-start">
+          <div className="flex flex-col items-center gap-y-3 py-2 xl:items-start xl:gap-y-4 xl:py-6">
             {aboutData[index].info.map((item, itemIndex) => (
-              <div
-                key={itemIndex}
-                className="glass glass-hover px-5 py-3 w-full max-w-[400px] flex items-center gap-x-4"
-              >
-                {/* Icon */}
-                {item.icons && (
-                  <div className="flex gap-x-3 text-accent text-xl shrink-0">
-                    {item.icons.map((icon, iconIndex) => (
-                      <div key={iconIndex}>{icon}</div>
-                    ))}
-                  </div>
-                )}
-                {/* Text */}
+              <div key={itemIndex} className="glass glass-hover flex w-full max-w-[440px] items-center gap-x-4 px-5 py-3">
+                {item.icons && <div className="flex shrink-0 gap-x-3 text-xl text-accent">{item.icons.map((icon) => icon)}</div>}
                 <div className="flex flex-col">
                   <div className="text-sm font-medium text-white/90">{item.title}</div>
-                  <div className="text-[12px] text-white/40 font-light">{item.desc}</div>
+                  <div className="text-[12px] font-light text-white/40">{item.desc}</div>
                 </div>
               </div>
             ))}

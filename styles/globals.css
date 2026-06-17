@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  display: block !important;
+}
+
 .translate-z-0 {
   transform: translateZ(0px);
 }
