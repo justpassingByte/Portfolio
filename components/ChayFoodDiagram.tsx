@@ -365,7 +365,7 @@ app.useGlobalPipes(
             </div>
 
             <div className="font-mono text-xs text-slate-300 overflow-x-auto p-4 bg-black/60 rounded-lg border border-white/[0.06] leading-relaxed">
-              <span className="text-slate-500">// Relational Inventory Audit Ledger</span>
+              <span className="text-slate-500">{'// Relational Inventory Audit Ledger'}</span>
               <br />
               <span className="text-purple-400">model</span> <span className="text-sky-300">StockTransaction</span> &#123;
               <br />
@@ -373,11 +373,11 @@ app.useGlobalPipes(
               <br />
               &nbsp;&nbsp;ingredientId &nbsp;<span className="text-yellow-300">String</span>
               <br />
-              &nbsp;&nbsp;type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-emerald-400">StockTxType</span> &nbsp;&nbsp;&nbsp;<span className="text-slate-500">// IMPORT | EXPORT_ORDER | EXPORT_WASTE | ADJUSTMENT</span>
+              &nbsp;&nbsp;type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-emerald-400">StockTxType</span> &nbsp;&nbsp;&nbsp;<span className="text-slate-500">{'// IMPORT | EXPORT_ORDER | EXPORT_WASTE | ADJUSTMENT'}</span>
               <br />
               &nbsp;&nbsp;quantity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-yellow-300">Decimal</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-slate-500">@db.Decimal(10, 2)</span>
               <br />
-              &nbsp;&nbsp;lotNumber &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-yellow-300">String?</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-slate-500">// Organic farm lot traceability</span>
+              &nbsp;&nbsp;lotNumber &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-yellow-300">String?</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-slate-500">{'// Organic farm lot traceability'}</span>
               <br />
               &nbsp;&nbsp;orderId &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-yellow-300">String?</span>
               <br />

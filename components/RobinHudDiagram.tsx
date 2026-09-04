@@ -218,7 +218,7 @@ export const RobinHudDiagram: React.FC = () => {
               Pragmatic MVP Strategy Buckets vs Unbounded GTO Trees
             </h4>
             <p className="text-xs sm:text-sm text-slate-400 font-light leading-relaxed">
-              Full Texas Hold\'em game trees contain billions of permutations. For low-latency inference, RobinHUD
+              Full Texas Hold&apos;em game trees contain billions of permutations. For low-latency inference, RobinHUD
               classifies spots into discrete strategy buckets with pre-computed equilibrium baselines:
             </p>
           </div>
