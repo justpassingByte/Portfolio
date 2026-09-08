@@ -79,9 +79,9 @@ export const profileData: ProfileData = {
       description: 'Model complex multi-party domains as formal Finite State Machines (FSM). Enforce strict concurrency barriers with PostgreSQL `SELECT ... FOR UPDATE` and Redis distributed locks to eliminate double-spending under concurrent traffic.',
     },
     {
-      title: 'Deterministic AI Architecture',
-      principle: 'Agentic Engineering > Raw Prompts',
-      description: 'Treat AI as a structured, deterministic engineering pipeline: orchestrating hierarchical subagent delegations, repository domain skills, and automated verification passes before code merge.',
+      title: 'Controlled & Invariant-Bound Agents',
+      principle: 'Ground-Truth Runtime Observability > Speculative AI Hallucinations',
+      description: 'Treating autonomous agents as tightly controlled, bounded engineering systems. Grounding agent decisions in runtime memory truth (V8 CDP heap extraction over DOM assumptions to eliminate hallucinations), prioritizing zero-token AST parsing for structured data, enforcing context-isolated subagent swarms with fail-safe timeouts, and closing the feedback loop with dual machine RAG and human spatial topology.',
     },
   ],
   techStackCategories: [

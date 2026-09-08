@@ -61,14 +61,25 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ paths, title }) 
 
       {/* Main Stage Large Viewer */}
       <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-[#0A0D16] border border-white/[0.08] shadow-2xl group">
-        <Image
-          src={paths[currentIndex]}
-          alt={`${title} screenshot ${currentIndex + 1}`}
-          fill
-          className="object-contain transition-all duration-300"
-          sizes="(min-width: 1024px) 960px, 100vw"
-          priority
-        />
+        {paths[currentIndex]?.endsWith('.mp4') ? (
+          <video
+            src={paths[currentIndex]}
+            controls
+            autoPlay
+            muted
+            loop
+            className="w-full h-full object-contain"
+          />
+        ) : (
+          <Image
+            src={paths[currentIndex]}
+            alt={`${title} screenshot ${currentIndex + 1}`}
+            fill
+            className="object-contain transition-all duration-300"
+            sizes="(min-width: 1024px) 960px, 100vw"
+            priority
+          />
+        )}
 
         {/* Ambient Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none" />

@@ -33,13 +33,24 @@ const ProjectCard = ({ project }) => {
         className="relative mb-5 flex w-full items-center justify-center overflow-hidden rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-[1.02]"
         aria-label={`View ${project.title} case study`}
       >
-        <Image
-          src={project.paths[currentIndex]}
-          alt={`${project.title} screenshot ${currentIndex + 1}`}
-          width={500}
-          height={300}
-          className="h-[200px] w-full rounded-lg object-cover sm:h-[250px]"
-        />
+        {project.paths[currentIndex]?.endsWith('.mp4') ? (
+          <video
+            src={project.paths[currentIndex]}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="h-[200px] w-full rounded-lg object-cover sm:h-[250px]"
+          />
+        ) : (
+          <Image
+            src={project.paths[currentIndex]}
+            alt={`${project.title} screenshot ${currentIndex + 1}`}
+            width={500}
+            height={300}
+            className="h-[200px] w-full rounded-lg object-cover sm:h-[250px]"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-80" />
         <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
           <div>

@@ -35,6 +35,70 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: 'autonomous-testops-sre-mesh',
+    title: 'Autonomous TestOps & SRE Knowledge Mesh',
+    role: 'Autonomous Systems Architect & Lead TestOps Engineer',
+    category: 'Agentic AI Systems, SRE & Interactive Knowledge Graphs',
+    paths: ['/canvas-demo.mp4'],
+    link: 'https://github.com/justpassingByte/agentic-test-ops',
+    github: 'https://github.com/justpassingByte/agentic-test-ops',
+    githubBackend: 'https://github.com/justpassingByte/canvas-note-engineer',
+    isPrivate: false,
+    featured: true,
+    description: 'Self-contained, invariant-bound Agentic TestOps ecosystem uniting headless Playwright multi-worker browser swarms, Chrome DevTools Protocol (CDP) in-memory V8 heap extraction, and an interactive infinite spatial canvas for SRE incident simulation.',
+    summary:
+      'Engineered an enterprise-grade autonomous testing and diagnostic ecosystem uniting two open-source frameworks: agentic-test-ops (an MCP-compliant autonomous test runner and V8 heap debugger) and canvas-note-engineer (a DDD-based infinite spatial knowledge mesh and SRE incident simulator). Solved the fundamental industry challenge of AI hallucinations and runaway token burn in software testing by anchoring agent reasoning directly in runtime RAM truth (CDP Port 9229), enforcing isolated browser contexts across concurrent workers, and closing the diagnostic loop through automated RAG memory for machines and 4-tier spatial topology for human review.',
+    architectureHighlight:
+      'Dual-loop agentic ecosystem: Headless Playwright Multi-Worker Swarm + Chrome DevTools Protocol (CDP) V8 Heap Inspection + Local Fast-Path AST Ingestion (5ms, 0-tokens) + Infinite Spatial Knowledge Graph with SQLite WAL caching.',
+    stack: [
+      'TypeScript',
+      'Playwright',
+      'Chrome DevTools Protocol (CDP)',
+      'Model Context Protocol (MCP)',
+      'React 18',
+      'Zustand',
+      'Express',
+      'SQLite WAL',
+      'Docker',
+      'Vite SingleFile',
+      'Tailwind CSS',
+    ],
+    highlights: [
+      'Ground-Truth Runtime Observability: Eliminated AI hallucinations and speculative error diagnosis by connecting directly to the Node.js V8 Engine via CDP (Port :9229), freezing call stacks, and inspecting live heap variables (sellerRank = null, isNegotiated = true) rather than guessing from DOM text.',
+      'Parallel Multi-Worker Swarm: Architected a concurrent fan-out/fan-in test execution pipeline using a singleton shared Chromium browser with isolated BrowserContexts (activeContexts Map), eliminating cold-start overhead while preventing cross-flow cookie or state leakage.',
+      'Token-Burn & Fail-Safe Defenses: Implemented strict 4,000-character output truncation, 10MB process buffer caps, and guaranteed Debugger.resume hooks on timeouts and disconnects to prevent Node.js backend deadlocks and runaway LLM billing loops.',
+      'Zero-Token AST Ingestion Pipeline: Built an offline-first Local AST Parser capable of digesting complex .canvas.json test payloads in ~5ms at 0 token cost, reserving expensive LLM inferences exclusively for high-level semantic synthesis.',
+      '4-Tier Spatial Bounded-Context Topology: Transformed flat, unreadable JSON test reports into an interactive infinite spatial graph partitioned by Domain -> Service Cluster -> Sub-Clusters -> Specialized Pods with real-time SVG animated schematics.',
+      'Autonomous SRE Incident Simulation: Developed interactive DAG error propagation modeling where clicking a defect node triggers red Bug Vector Particles traveling downstream across services to visually audit Circuit Breaker tripping and cascading blast radiuses.',
+      'Dual Knowledge Feedback Loop: Automatically generated structured Markdown ontology specs to feed downstream AI Agent RAG memory while simultaneously synchronizing spatial canvas clusters for 5-second human executive sign-off.',
+    ],
+    sections: [
+      {
+        title: 'Mindset 1: Ground-Truth Observability vs. Speculative Hallucination',
+        body: 'A fundamental flaw in modern AI coding agents is their tendency to "hallucinate" error causes based on surface-level symptoms, such as generic HTTP 500 pages or ambiguous console warnings. In this ecosystem, we established the principle of Invariant Runtime Ground Truth. Instead of asking an LLM to guess why a checkout flow broke, the agent hooks into the V8 debugging port (:9229) using the Chrome DevTools Protocol. When a failure occurs, the engine freezes the runtime, captures the exact call frame stack, and extracts live heap memory values. The agent proves defects with concrete in-memory evidence—such as verifying that an unhandled null pointer occurred on an uninitialized sellerRank object during negotiated checkout—before proposing any code modification or regression test.',
+      },
+      {
+        title: 'Mindset 2: Deterministic-First Architecture & Zero-Token Fast Paths',
+        body: 'Treating AI as a magic hammer for every task inevitably leads to astronomical token bills, high network latency, and nondeterministic behavior. We engineered a strict Dual Ingestion Architecture. When consuming structured test suite artifacts, overnight sweep payloads, or schema-compliant JSON, the platform routes execution through a zero-token Local AST Parser running client-side. The entire knowledge graph is generated and rendered in approximately 5 milliseconds without making external API calls or spending a single LLM token. LLM inference is strictly reserved as an on-demand semantic engine for open-ended brainstorming, architecture exploration, and conceptual synthesis.',
+      },
+      {
+        title: 'Mindset 3: Hard-Bounded Subagent Swarms & Fail-Safe Engineering',
+        body: 'Autonomous agents left unchecked in a multi-step loop will eventually diverge, consume excessive context window space, or deadlock long-running processes. To prevent this, we decoupled the execution swarm into three rigidly bounded personas: the Master Orchestrator, the Parallel Flow Worker, and the CDP Deep Investigator. Each worker operates in an isolated browser context under strict resource bounds, including 4,000-character payload caps and 10MB buffer limits. Crucially, the CDP client enforces guaranteed Debugger.resume fail-safes: even if an investigator times out or network connection drops, the frozen Node.js backend process is immediately resumed, ensuring production environments never suffer unrecoverable memory deadlocks.',
+      },
+      {
+        title: 'Mindset 4: Dual-Loop Knowledge Closure (Machine RAG + Human Spatial Topology)',
+        body: 'True test operations engineering must satisfy two distinct consumers: autonomous machines and human engineers. Machine-readable artifacts must be concise, structured, and vector-indexable; human artifacts must be intuitive, spatial, and readable at a glance. Our ecosystem automatically generates both from every test run. For the AI agent, it emits a structured Markdown RAG document containing defect ontology and regression test specifications, ensuring subsequent agent runs never repeat past mistakes. For human tech leads and reviewers, it synchronizes an interactive infinite canvas mapping the entire defect blast radius across Bounded Contexts, complete with real-time animated hardware schematics and SRE incident propagation simulation.',
+      },
+    ],
+    recruiterTakeaways: [
+      'Demonstrates advanced mastery of Agentic AI Orchestration, moving beyond simple prompt engineering to build resilient, invariant-bound, multi-worker swarms with rigorous guardrails.',
+      'Deep system-level debugging capability combining headless Playwright automation with low-level Chrome DevTools Protocol (CDP) V8 heap inspection.',
+      'Strong architectural pragmatism balancing zero-token deterministic AST processing with cost-effective LLM semantic inference.',
+      'Proven expertise in Domain-Driven Design (DDD), bounded contexts, and distributed systems visualization via interactive, high-performance web canvases.',
+    ],
+  },
+
+  {
     slug: 'trustbase',
     title: 'Trustbase',
     role: 'Core Systems & Full-Stack Architect',
