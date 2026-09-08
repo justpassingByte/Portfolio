@@ -19,12 +19,13 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Mindset', href: '#mindset' },
-    { name: 'Systems', href: '#systems' },
-    { name: 'Tech Stack', href: '#stack' },
-    { name: 'Featured Work', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'About', href: '/#about' },
+    { name: 'Ecosystems', href: '/#ecosystems' },
+    { name: 'Mindset', href: '/#mindset' },
+    { name: 'Systems', href: '/#systems' },
+    { name: 'Tech Stack', href: '/#stack' },
+    { name: 'Projects', href: '/#projects' },
+    { name: 'Contact', href: '/#contact' },
   ];
 
   return (
@@ -66,13 +67,13 @@ export const Navbar: React.FC = () => {
         {/* Desktop Nav Links */}
         <nav className="hidden lg:flex items-center gap-1 bg-white/[0.03] border border-white/[0.06] rounded-full px-4 py-1.5 backdrop-blur-md">
           {[
-            { name: 'About', href: '#about' },
-            { name: 'Ecosystems', href: '#ecosystems' },
-            { name: 'Mindset', href: '#mindset' },
-            { name: 'Systems', href: '#systems' },
-            { name: 'Tech Stack', href: '#stack' },
-            { name: 'Projects', href: '#projects' },
-            { name: 'Contact', href: '#contact' },
+            { name: 'About', href: '/#about' },
+            { name: 'Ecosystems', href: '/#ecosystems' },
+            { name: 'Mindset', href: '/#mindset' },
+            { name: 'Systems', href: '/#systems' },
+            { name: 'Tech Stack', href: '/#stack' },
+            { name: 'Projects', href: '/#projects' },
+            { name: 'Contact', href: '/#contact' },
           ].map((link) => (
             <Link
               key={link.name}
@@ -114,7 +115,7 @@ export const Navbar: React.FC = () => {
             <Facebook className="w-4 h-4" />
           </a>
           <Link
-            href="#projects"
+            href="/#projects"
             className="inline-flex items-center gap-1.5 text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500/20 px-3.5 py-1.5 rounded-lg transition-all"
           >
             <span>View Work</span>
@@ -171,7 +172,7 @@ export const Navbar: React.FC = () => {
               <Facebook className="w-4 h-4" />
             </a>
             <Link
-              href="#contact"
+              href="/#contact"
               onClick={() => setMobileOpen(false)}
               className="text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-4 py-2 rounded-lg"
             >

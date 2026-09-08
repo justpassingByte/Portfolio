@@ -11,6 +11,18 @@ interface ProjectCardProps {
   featured?: boolean;
 }
 
+
+const getVideoPoster = (src?: string, slug?: string) => {
+  if (!src) return undefined;
+  if (src.includes('canvas') || slug === 'autonomous-testops-sre-mesh') {
+    return '/canvas-testops-demo.png';
+  }
+  if (src.includes('trustbase') || slug === 'trustbase') {
+    return '/trustbase-hero.png';
+  }
+  return undefined;
+};
+
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured }) => {
   const [imageError, setImageError] = useState(false);
   const primaryImage = project.paths?.[0];
@@ -18,23 +30,36 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured }) =
   return (
     <div
       className={`group relative flex flex-col justify-between bg-[#0A0D16] border border-white/[0.08] hover:border-emerald-500/40 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/5 ${
-        featured ? 'lg:col-span-2 xl:col-span-2' : ''
+        featured ? 'col-span-full md:col-span-2 lg:col-span-2 xl:col-span-2' : ''
       }`}
     >
       {/* Top Preview Area */}
-      <div className="relative w-full aspect-[16/9] bg-[#0F1424] border-b border-white/[0.06] overflow-hidden">
-        {/* If image is available and not errored */}
-        {primaryImage && !imageError ? (
+      <div className={`relative w-full ${featured ? 'aspect-[16/9] md:aspect-[21/9]' : 'aspect-[16/9]'} bg-[#0F1424] border-b border-white/[0.06] overflow-hidden`}>
+        {/* If video is available */}
+        {primaryImage && (primaryImage.endsWith('.mp4') || primaryImage.endsWith('.webm')) ? (
+          <div className="relative w-full h-full">
+            <video
+              src={primaryImage}
+              poster={getVideoPoster(primaryImage, project.slug)}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0D16] via-transparent to-transparent opacity-60 pointer-events-none" />
+          </div>
+        ) : primaryImage && !imageError ? (
           <div className="relative w-full h-full">
             <Image
               src={primaryImage}
               alt={project.title}
               fill
               className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
-              sizes="(min-width: 1024px) 600px, 100vw"
+              sizes="(min-width: 1024px) 1200px, 100vw"
               onError={() => setImageError(true)}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0D16] via-transparent to-transparent opacity-80" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0D16] via-transparent to-transparent opacity-80 pointer-events-none" />
           </div>
         ) : (
           /* Sleek fallback visual card when image is not yet loaded */

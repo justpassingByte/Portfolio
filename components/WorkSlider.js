@@ -11,6 +11,14 @@ import { useState } from 'react';
 import { BsArrowRight, BsBoxArrowUpRight, BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import { projects } from '../data/projects';
 
+
+const getVideoPoster = (path) => {
+  if (!path) return undefined;
+  if (path.includes('canvas')) return '/canvas-testops-demo.png';
+  if (path.includes('trustbase')) return '/trustbase-hero.png';
+  return undefined;
+};
+
 const ProjectCard = ({ project }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -33,9 +41,10 @@ const ProjectCard = ({ project }) => {
         className="relative mb-5 flex w-full items-center justify-center overflow-hidden rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-[1.02]"
         aria-label={`View ${project.title} case study`}
       >
-        {project.paths[currentIndex]?.endsWith('.mp4') ? (
+        {(project.paths[currentIndex]?.endsWith('.mp4') || project.paths[currentIndex]?.endsWith('.webm')) ? (
           <video
             src={project.paths[currentIndex]}
+            poster={getVideoPoster(project.paths[currentIndex])}
             autoPlay
             muted
             loop

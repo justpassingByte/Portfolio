@@ -406,7 +406,7 @@ export default function HomePage() {
               <ProjectCard
                 key={project.slug}
                 project={project}
-                featured={project.slug === 'trustbase'}
+                featured={project.slug === 'trustbase' || project.slug === 'autonomous-testops-sre-mesh'}
               />
             ))}
           </div>
