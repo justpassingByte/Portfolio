@@ -46,8 +46,8 @@ export const profileData: ProfileData = {
   location: 'Vietnam',
   status: 'Open for engineering opportunities',
   bio: [
-    'Core Systems & Full-Stack Architect with a deep focus on distributed transaction integrity, high-concurrency data safety, and interconnected platform ecosystems.',
-    'Currently architecting mission-critical infrastructure at Trustbase (digital product marketplace & freelance escrow engine), alongside designing closed-loop ecosystems connecting cybercafe IoT telemetry with competitive esports arenas (Netsla ↔ Testictour ↔ TFT Grimoire) and AgriTech traceability (ChayFood ↔ Farm Management).',
+    'Core Systems & Full-Stack Architect with a deep focus on distributed transaction integrity, high-concurrency data safety, and autonomous AI engineering loops.',
+    'Designing mission-critical infrastructure across autonomous TestOps systems (Playwright multi-worker swarms & CDP V8 heap inspection), financial escrow engines (FSM state lifecycles & pessimistic database locking), and interconnected real-world operational platforms.',
     'Believer that real-world software must bridge physical operations with distributed computational guarantees. Driven to collaborate within high-standard engineering teams where code quality, distributed patterns, and production reliability come first.',
   ],
   socials: {
