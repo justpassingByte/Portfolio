@@ -90,18 +90,6 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
               </a>
             )}
 
-            {project.stagingLink && (
-              <a
-                href={project.stagingLink}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-sky-500/10 text-sky-400 border border-sky-500/20 font-semibold text-xs hover:bg-sky-500/20 transition-all"
-              >
-                <span>Staging Portal Preview</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
-            )}
-
             {project.github && (
               <a
                 href={project.github}
@@ -110,20 +98,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-white border border-white/[0.1] text-xs font-mono transition-all"
               >
                 <Github className="w-4 h-4 text-emerald-400" />
-                <span>{project.githubBackend ? 'Frontend Repository (PoNotesFE)' : 'Source Code (GitHub)'}</span>
-                <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
-              </a>
-            )}
-
-            {project.githubBackend && (
-              <a
-                href={project.githubBackend}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-white border border-white/[0.1] text-xs font-mono transition-all"
-              >
-                <Github className="w-4 h-4 text-emerald-400" />
-                <span>Backend API Repository (PoNotesBE)</span>
+                <span>Source Code (GitHub)</span>
                 <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
               </a>
             )}

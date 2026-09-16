@@ -18,9 +18,7 @@ export interface Project {
   category: string;
   paths: string[];
   link?: string;
-  stagingLink?: string;
   github?: string;
-  githubBackend?: string;
   isPrivate?: boolean;
   featured?: boolean;
   description: string;
@@ -40,16 +38,16 @@ export const projects: Project[] = [
     role: 'Autonomous Systems Architect & Lead TestOps Engineer',
     category: 'Agentic AI Systems, SRE & Interactive Knowledge Graphs',
     paths: ['/canvas-demo.mp4', '/canvas-testops-demo.png'],
-    link: 'https://github.com/justpassingByte/agentic-test-ops',
-    github: 'https://github.com/justpassingByte/agentic-test-ops',
-    githubBackend: 'https://github.com/justpassingByte/canvas-note-engineer',
+    link: 'https://canvas-note-engineer.vercel.app/',
+    github: 'https://github.com/justpassingByte/canvas-note-engineer',
     isPrivate: false,
     featured: true,
-    description: 'Self-contained, invariant-bound Agentic TestOps ecosystem uniting headless Playwright multi-worker browser swarms, Chrome DevTools Protocol (CDP) in-memory V8 heap extraction, and an interactive infinite spatial canvas for SRE incident simulation.',
+    description:
+      'Self-contained, invariant-bound Agentic TestOps ecosystem uniting dual-source ingestion (RFC docs + CDP V8 heap runtime evidence), an interactive infinite spatial canvas for SRE incident simulation, and an Interview Lab ground-truth benchmark library.',
     summary:
-      'Engineered an enterprise-grade autonomous testing and diagnostic ecosystem uniting two open-source frameworks: agentic-test-ops (an MCP-compliant autonomous test runner and V8 heap debugger) and canvas-note-engineer (a DDD-based infinite spatial knowledge mesh and SRE incident simulator). Solved the fundamental industry challenge of AI hallucinations and runaway token burn in software testing by anchoring agent reasoning directly in runtime RAM truth (CDP Port 9229), enforcing isolated browser contexts across concurrent workers, and closing the diagnostic loop through automated RAG memory for machines and 4-tier spatial topology for human review.',
+      'Engineered an enterprise-grade autonomous testing and diagnostic ecosystem uniting two frameworks: agentic-test-ops (an MCP-compliant autonomous test runner and V8 heap debugger) and canvas-note-engineer (a DDD-based infinite spatial knowledge mesh and SRE incident simulator). Solved the fundamental industry challenge of AI hallucinations and runaway token burn in software engineering by establishing a 3-pillar architecture: (1) Dual-Source Ingestion Pipeline consuming RFC architecture docs via RAG alongside live Node.js V8 Heap evidence (CDP Port 9229); (2) Interactive Spatial Canvas for real-time DAG protocol tracing and SRE bug vector particle simulation across bounded contexts; and (3) Interview Lab standard reference library serving as an anti-hallucination ground-truth benchmark and flashcard drill for distributed system invariants.',
     architectureHighlight:
-      'Dual-loop agentic ecosystem: Headless Playwright Multi-Worker Swarm + Chrome DevTools Protocol (CDP) V8 Heap Inspection + Local Fast-Path AST Ingestion (5ms, 0-tokens) + Infinite Spatial Knowledge Graph with SQLite WAL caching.',
+      '3-Pillar Ecosystem: Dual-Source Ingestion (RFC Docs RAG + CDP Port 9229 V8 Heap Inspection) + Interactive Spatial Canvas (DAG & SRE Incident Simulation) + Interview Lab (System Design Ground Truth Benchmark & Anti-Hallucination Cheatsheets).',
     stack: [
       'TypeScript',
       'Playwright',
@@ -62,9 +60,14 @@ export const projects: Project[] = [
       'Docker',
       'Vite SingleFile',
       'Tailwind CSS',
+      'System Design Cheatsheets',
+      'Interview Lab (Ground Truth Benchmark)',
+      'RAG RFC Ingestion',
     ],
     highlights: [
       'Ground-Truth Runtime Observability: Eliminated AI hallucinations and speculative error diagnosis by connecting directly to the Node.js V8 Engine via CDP (Port :9229), freezing call stacks, and inspecting live heap variables (sellerRank = null, isNegotiated = true) rather than guessing from DOM text.',
+      'Ground-Truth Cheatsheet Library (Interview Lab): Tích hợp thư viện tri thức kiến trúc chuẩn mực đóng vai trò mỏ neo đối chiếu (Anti-Hallucination Fact-Check) tức thì khi AI sinh sơ đồ thực chiến, kèm bộ flashcard drill luyện phản xạ kiến trúc phân tán.',
+      'Agentic TestOps Runtime Swarm (agentic-test-ops): Companion multi-worker engine hooking into Playwright and CDP Port 9229 to extract live V8 heap variables and inject incident telemetry into the canvas.',
       'Parallel Multi-Worker Swarm: Architected a concurrent fan-out/fan-in test execution pipeline using a singleton shared Chromium browser with isolated BrowserContexts (activeContexts Map), eliminating cold-start overhead while preventing cross-flow cookie or state leakage.',
       'Token-Burn & Fail-Safe Defenses: Implemented strict 4,000-character output truncation, 10MB process buffer caps, and guaranteed Debugger.resume hooks on timeouts and disconnects to prevent Node.js backend deadlocks and runaway LLM billing loops.',
       'Zero-Token AST Ingestion Pipeline: Built an offline-first Local AST Parser capable of digesting complex .canvas.json test payloads in ~5ms at 0 token cost, reserving expensive LLM inferences exclusively for high-level semantic synthesis.',
@@ -89,12 +92,17 @@ export const projects: Project[] = [
         title: 'Mindset 4: Dual-Loop Knowledge Closure (Machine RAG + Human Spatial Topology)',
         body: 'True test operations engineering must satisfy two distinct consumers: autonomous machines and human engineers. Machine-readable artifacts must be concise, structured, and vector-indexable; human artifacts must be intuitive, spatial, and readable at a glance. Our ecosystem automatically generates both from every test run. For the AI agent, it emits a structured Markdown RAG document containing defect ontology and regression test specifications, ensuring subsequent agent runs never repeat past mistakes. For human tech leads and reviewers, it synchronizes an interactive infinite canvas mapping the entire defect blast radius across Bounded Contexts, complete with real-time animated hardware schematics and SRE incident propagation simulation.',
       },
+      {
+        title: 'Mindset 5: Sơ Đồ Thực Chiến (Canvas) vs. Thư Viện Tri Thức Chuẩn (Interview Lab)',
+        body: "Một hệ thống hỗ trợ kỹ sư hiệu quả cần tách biệt rõ ràng giữa 'Sơ đồ thực chiến của case cụ thể' và 'Thư viện tri thức chuẩn mực'. Trong hệ sinh thái này, Canvas là nơi mô phỏng chi tiết topo hoạt động thực chiến (được nạp từ RFC docs tự viết hoặc gom từ runtime V8 heap của TestOps). Trong khi đó, Interview Lab đóng vai trò là thư viện chân lý chuẩn (Ground Truth Reference). Bất cứ khi nào AI đề xuất một giải pháp kiến trúc có nguy cơ bịa đặt (hallucination), người dùng có thể mở ngay Cheatsheet đối chiếu để kiểm tra tính đúng đắn của distributed lock, idempotency token hay acid boundaries. Sự cộng sinh giữa thực chiến và chuẩn mực tạo nên một môi trường làm việc vừa linh hoạt vừa không thể bị đánh lừa bởi AI.",
+      },
     ],
     recruiterTakeaways: [
       'Demonstrates advanced mastery of Agentic AI Orchestration, moving beyond simple prompt engineering to build resilient, invariant-bound, multi-worker swarms with rigorous guardrails.',
       'Deep system-level debugging capability combining headless Playwright automation with low-level Chrome DevTools Protocol (CDP) V8 heap inspection.',
       'Strong architectural pragmatism balancing zero-token deterministic AST processing with cost-effective LLM semantic inference.',
       'Proven expertise in Domain-Driven Design (DDD), bounded contexts, and distributed systems visualization via interactive, high-performance web canvases.',
+      'Architected a resilient anti-hallucination dual verification loop: anchoring practical case simulations in verified ground-truth reference cheatsheets and real-world system design benchmarks.',
     ],
   },
 
@@ -105,7 +113,6 @@ export const projects: Project[] = [
     category: 'Multi-Vendor Marketplace & Distributed Systems',
     paths: ['/trustbase.png', '/trustbase-marketplace.png', '/trustbase-product-detail.png', '/trustbase-demo.webm'],
     link: 'https://trustinfy.com',
-    stagingLink: 'https://customer.trustbase.com.vn',
     isPrivate: true,
     featured: true,
     description: 'Enterprise multi-vendor digital products and freelance marketplace built on a pnpm monorepo, strict boundary architecture, state-driven escrow lifecycles, and resilient distributed queues.',
@@ -189,7 +196,6 @@ export const projects: Project[] = [
     category: 'AI Decision-Support System & Poker Intelligence',
     paths: ['/robinhud.PNG', '/robinhud-2.png'],
     github: 'https://github.com/justpassingByte/PoNotesFE',
-    githubBackend: 'https://github.com/justpassingByte/PoNotesBE',
     featured: true,
     description: 'AI-assisted poker intelligence platform turning messy player notes into multidimensional strategy signals and exploit recommendations.',
     summary:

@@ -160,19 +160,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured }) =
                   aria-label={`${project.title} GitHub`}
                 >
                   <Github className="w-3.5 h-3.5" />
-                  <span>{project.githubBackend ? 'FE' : 'Repo'}</span>
-                </a>
-              )}
-              {project.githubBackend && (
-                <a
-                  href={project.githubBackend}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-mono text-slate-400 hover:text-white transition-colors"
-                  aria-label={`${project.title} Backend GitHub`}
-                >
-                  <Github className="w-3.5 h-3.5" />
-                  <span>BE</span>
+                  <span>Code</span>
+                  <ExternalLink className="w-2.5 h-2.5 text-slate-500" />
                 </a>
               )}
               {project.link && (
@@ -184,18 +173,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured }) =
                   aria-label={`${project.title} Live Demo`}
                 >
                   <span>Live</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-              )}
-              {project.stagingLink && (
-                <a
-                  href={project.stagingLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-mono text-sky-400 hover:text-sky-300 transition-colors"
-                  aria-label={`${project.title} Staging`}
-                >
-                  <span>Staging</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               )}
